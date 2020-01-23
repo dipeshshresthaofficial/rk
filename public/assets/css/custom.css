@@ -1,0 +1,257 @@
+* {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+
+/* #header-sec {
+    height: 970px;
+    background-image: url('../../../images/Background-Image.png') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+#navigation-bar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99999999999;
+}
+
+.container-fluid {
+    padding: 1% 12% !important;
+}
+
+.bold-font {
+    font-weight: bolder !important;
+}
+
+#nav-items {
+    font-size: 18px !important;
+}
+
+.rotate-img {
+    height: 500px !important;
+    transform: rotate(5deg);
+}
+
+
+/* our service section style */
+
+.service-div {
+    margin-top: 40px !important;
+}
+
+.service-img {
+    position: relative;
+    top: 30px;
+}
+
+.our-product-sec {
+    /* background-color: #FBFCFC; */
+}
+
+.card {
+    /* box-shadow: 4px 5px 18px -9px rgba(0, 0, 0, 0.64) !important; */
+    /* border-radius: 0.9em !important; */
+    border: none !important;
+}
+
+
+/* our product categories section style */
+
+.card-style {
+    box-shadow: 4px 5px 30px -9px rgba(0, 0, 0, 0.64) !important;
+    border-radius: 0.9em !important;
+    border: none !important;
+}
+
+.category-style {
+    margin-top: 100px;
+}
+
+
+/* our Achievement section style */
+
+.achievement-sec {
+    background: url('../../../images/Footer.png') fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.achievement-sec h5 {
+    /* font-size: 12px; */
+    font-weight: bold;
+    color: green;
+}
+
+
+/* our company section SLIDER style */
+
+.company-sec {
+    background-image: url('../../../images/RK-wall-mountain.jpeg') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Slider: https://bootsnipp.com/snippets/Q0Z1j */
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+/* border bottom on SECTION TITILE */
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 8%;
+    height: 8px;
+    left: 46%;
+    right: 50%;
+    border-bottom: 2px solid grey;
+    display: block;
+}
+
+@media only screen and (max-width: 1024px) {
+    .service-img {
+        position: static;
+        top: 0px;
+        padding: 50px 0 !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* removing the absolute position of image in service section so that it doesn't overlap other content */
+    .service-div {
+        margin-top: 30px !important;
+    }
+    .service-img {
+        position: static;
+        top: 0px;
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    /* our product category section */
+    .service-div {
+        margin-top: 30px !important;
+    }
+    .category-style {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 250px) {}

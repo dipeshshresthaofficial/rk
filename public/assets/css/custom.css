@@ -225,6 +225,9 @@ h2::after {
 }
 
 @media only screen and (max-width: 1024px) {
+    .category-style {
+        margin-top: 0 !important;
+    }
     .service-img {
         position: static;
         top: 0px;
@@ -234,6 +237,9 @@ h2::after {
 
 @media only screen and (max-width: 768px) {
     /* removing the absolute position of image in service section so that it doesn't overlap other content */
+    .category-style {
+        margin-top: 0 !important;
+    }
     .service-div {
         margin-top: 30px !important;
     }
@@ -250,7 +256,7 @@ h2::after {
         margin-top: 30px !important;
     }
     .category-style {
-        margin-top: 0px;
+        margin-top: 0px !important;
     }
 }
 

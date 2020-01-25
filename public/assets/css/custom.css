@@ -74,7 +74,7 @@
 /* our Achievement section style */
 
 .achievement-sec {
-    background: url('../../../images/Footer.png');
+    background-image: url('../../../images/Footer.png');
     position: fixed;
     background-repeat: no-repeat;
     background-position: center;

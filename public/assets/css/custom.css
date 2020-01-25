@@ -225,18 +225,21 @@ h2::after {
 }
 
 @media only screen and (max-width: 1024px) {
-    .category-style {
-        margin-top: 0 !important;
-    }
     .service-img {
         position: static;
         top: 0px;
         padding: 50px 0 !important;
     }
+    .category-style {
+        margin-top: 0 !important;
+    }
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     /* removing the absolute position of image in service section so that it doesn't overlap other content */
+    .achievement-div {
+        margin-top: 40px !important;
+    }
     .category-style {
         margin-top: 0 !important;
     }

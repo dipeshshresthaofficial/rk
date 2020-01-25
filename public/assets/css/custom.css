@@ -74,12 +74,10 @@
 /* our Achievement section style */
 
 .achievement-sec {
-    background: url('../../../images/Footer.png') fixed !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-    -webkit-background-size: 1920px 960px;
+    background: url('../../../images/Footer.png') no-repeat center center fixed !important;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 

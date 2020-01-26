@@ -75,8 +75,9 @@
 
 .achievement-sec {
     z-index: -10;
-    background: url('../../../images/Footer.png') no-repeat center center fixed !important;
+    background: url('../../../images/Footer.png') no-repeat fixed !important;
     background-size: cover;
+    
 }
 
 .achievement-sec h5 {

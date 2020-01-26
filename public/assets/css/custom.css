@@ -76,6 +76,7 @@
 .achievement-sec {
     z-index: -10;
     background: url('../../../images/Footer.png') no-repeat center center fixed !important;
+    -webkit-background: url('../../../images/Footer.png') no-repeat center center fixed !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -231,9 +232,6 @@ h2::after {
         position: static;
         top: 0px;
         padding: 50px 0 !important;
-    }
-    .category-style {
-        margin-top: 0 !important;
     }
 }
 

@@ -76,11 +76,11 @@
 .achievement-sec {
     z-index: -10;
     background: url('../../../images/Footer.png') no-repeat center center fixed !important;
-    -webkit-background: url('../../../images/Footer.png') no-repeat center center fixed !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: scroll;
 }
 
 .achievement-sec h5 {
@@ -283,3 +283,10 @@ h2::after {
 }
 
 @media only screen and (max-width: 250px) {}
+
+@media only screen and (max-width: 575px)  and (max-width: 768px) {
+    .achievement-sec {
+        background-attachment: initial;
+    }
+    
+}

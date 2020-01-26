@@ -80,7 +80,9 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
 }
 
 .achievement-sec h5 {

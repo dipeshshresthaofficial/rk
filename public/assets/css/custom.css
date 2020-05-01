@@ -1,4 +1,11 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -30,19 +37,60 @@
     font-size: 18px !important;
 }
 
-.rotate-img {
+
+/* .rotate-img {
     height: 500px !important;
     transform: rotate(5deg);
+} */
+
+.main-slider:hover {
+    /* box-shadow: 4px 5px 30px -9px rgba(0, 0, 0, 0.64); */
+    /* border-radius: 5em !important; */
+    animation-name: zoomIn;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.main-slider:not(:hover) {
+    animation-name: zoomOut;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+}
+
+.custom {
+    overflow: hidden;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 
 /* our service section style */
 
 .service-div {
-    margin-top: 40px !important;
+    margin-top: 40px;
 }
 
-.service-img {
+.service-div-img {
     position: relative;
     top: 30px;
 }
@@ -61,9 +109,9 @@
 /* our product categories section style */
 
 .card-style {
-    box-shadow: 4px 5px 30px -9px rgba(0, 0, 0, 0.64) !important;
+    box-shadow: 4px 5px 30px -9px rgba(0, 0, 0, 0.64);
     border-radius: 0.9em !important;
-    border: none !important;
+    border: none;
 }
 
 .category-style {
@@ -75,11 +123,9 @@
 
 .achievement-sec {
     z-index: -10;
-    background: url('../../../images/Footer.png') no-repeat center center fixed !important;
-    -webkit-background: url('../../../images/Footer.png') no-repeat center center fixed !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url('../../../images/Footer.png') no-repeat center center fixed;
+    background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;
+    
     background-size: cover;
 }
 
@@ -93,7 +139,7 @@
 /* our company section SLIDER style */
 
 .company-sec {
-    background-image: url('../../../images/RK-wall-mountain.jpeg') !important;
+    background-image: url('../../../images/RK-wall-mountain.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -227,40 +273,50 @@ h2::after {
     display: block;
 }
 
-@media only screen and (max-width: 1024px) {
-    .service-img {
+@media (min-width: 1024px) {
+    .service-div-img {
         position: static;
         top: 0px;
-        padding: 50px 0 !important;
+        padding: 50px 0;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     /* removing the absolute position of image in service section so that it doesn't overlap other content */
-    .achievement-div {
-        margin-top: 40px !important;
-    }
-    .category-style {
-        margin-top: 0 !important;
-    }
     .service-div {
-        margin-top: 30px !important;
+        margin-top: 30px;
     }
-    .service-img {
+    .service-div-img {
         position: static;
         top: 0px;
-        padding: 0 !important;
+        padding: 0;
+    }
+    .achievement-div {
+        margin-top: 40px;
     }
 }
 
-@media only screen and (max-width: 575px) {
+@media (min-width: 426px) and (max-width: 767px) {
     /* our product category section */
     .service-div {
-        margin-top: 30px !important;
+        margin-top: 30px;
+    }
+    .service-img {
+        margin-bottom: 50px;
     }
     .category-style {
-        margin-top: 0px !important;
+        margin-top: 0px;
     }
 }
 
-@media only screen and (max-width: 250px) {}
+@media (max-width: 425px) {
+    .service-div {
+        margin-top: 30px;
+    }
+    .service-img {
+        margin-bottom: 100px !important;
+    }
+    .category-style {
+        margin-top: 0px;
+    }
+}

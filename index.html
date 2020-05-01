@@ -12,12 +12,13 @@
     <title>Auto Parts | Radha Krishna Auto Parts - Butwal</title>
 
 
-    <!-- custom css link -->
-    <link rel="stylesheet" href="public/assets/css/custom.css">
 
     <!-- bootstrap links -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/js/bootstrap.min.js">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="public/assets/css/custom.css">
+
 
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -64,7 +65,7 @@
     </div>
 
     <!-- Navigation and Header Section -->
-    <div class="container-fluid" id="header-sec">
+    <div class="container" id="header-sec">
 
 
 
@@ -75,9 +76,26 @@
                 <a href="#" class="btn btn-primary btn-sm mt-2">About Us</a>
             </div>
 
-            <div class="col-lg-6 mt-5">
+            <div class="col-lg-6 mt-5 custom">
+                <div class=" main-slider">
+                    <!-- <img class="img-fluid rotate-img" src="images/RK-pasal-2.png"> -->
+                    <div id="carouselExampleSlidesOnly" class="carousel slide " data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="images/mustang1.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/mustang2.jpg" alt="Second slide">
+                                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VxNPOZsGHk8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/mustang3.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <img class="img-fluid rotate-img" src="images/RK-pasal-2.png">
+
             </div>
         </div>
     </div>
@@ -90,8 +108,8 @@
         </div>
 
         <div class="row service-div">
-            <div class="col-lg-6 service-img text-center">
-                <img width="350px" class="img-fluid card-style" src="images/RK-wall-wholesale-2.jpg" style="border-radius: 0.8em;">
+            <div class="col-lg-6 text-center service-div-img">
+                <img width="350px" class="img-fluid card-style service-img" src="images/RK-wall-wholesale-2.jpg" style="border-radius: 0.8em;">
             </div>
 
             <div class="col-lg-6">
@@ -117,8 +135,8 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 service-img text-center">
-                <img width="350px" class="img-fluid ml-1 card-style" src="images/RK-wall-retail.jpg " style="border-radius: 0.8em; ">
+            <div class="col-lg-6 service-div-img text-center">
+                <img width="350px" class="img-fluid ml-1 card-style service-img" src="images/RK-wall-retail.jpg " style="border-radius: 0.8em; ">
             </div>
 
 
@@ -310,8 +328,9 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous ">
     </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous ">
-    </script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous ">
+    </script> -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- our company  section required link-->
 

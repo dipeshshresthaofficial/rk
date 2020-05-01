@@ -37,9 +37,14 @@ body {
     font-size: 18px !important;
 }
 
+<<<<<<< HEAD
 
 /* .rotate-img {
     height: 500px !important;
+=======
+.rotate-img {
+    /* height: 500px !important; */
+>>>>>>> 6178e77892082a38f2bc72154811b019132ac574
     transform: rotate(5deg);
 } */
 
@@ -123,10 +128,20 @@ body {
 
 .achievement-sec {
     z-index: -10;
+<<<<<<< HEAD
     background: url('../../../images/Footer.png') no-repeat center center fixed;
     background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;
     
     background-size: cover;
+=======
+    background: url('../../../images/Footer.png') no-repeat center center fixed !important;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    max-height: 100%;
+    max-width: 100%;
+>>>>>>> 6178e77892082a38f2bc72154811b019132ac574
 }
 
 .achievement-sec h5 {
@@ -294,6 +309,16 @@ h2::after {
     .achievement-div {
         margin-top: 40px;
     }
+
+    .service-div {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .service-div div[data-child-order="1"]{
+        order: -1 !important;
+    }
+    
 }
 
 @media (min-width: 426px) and (max-width: 767px) {
@@ -307,8 +332,18 @@ h2::after {
     .category-style {
         margin-top: 0px;
     }
+
+    .service-div {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .service-div div[data-child-order="1"]{
+        order: -1 !important;
+    }
 }
 
+<<<<<<< HEAD
 @media (max-width: 425px) {
     .service-div {
         margin-top: 30px;
@@ -319,4 +354,14 @@ h2::after {
     .category-style {
         margin-top: 0px;
     }
+=======
+@media only screen and (max-width: 250px) {}
+
+@media only screen and (max-width: 575px)  and (max-width: 768px) {
+    /* .achievement-sec {
+        background-attachment: initial;
+        -webkit-background-attachment: initial;
+    } */
+    
+>>>>>>> 6178e77892082a38f2bc72154811b019132ac574
 }

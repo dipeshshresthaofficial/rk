@@ -341,7 +341,7 @@ h2::after {
     background: url('../../../images/Footer.png');
     /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: initial;
     -webkit-background-size: 1920px 960px;
     -moz-background-size: cover;
     background-position: center center;
@@ -362,4 +362,15 @@ h2::after {
     .custom-service{
         overflow-y: hidden;
     }
+    .achievement-sec {
+    z-index: -10;
+    background: url('../../../images/Footer.png');
+    /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    -webkit-background-size: 1920px 960px;
+    -moz-background-size: cover;
+    background-position: center center;
+    /*object-position: bottom center;*/
+}
 }

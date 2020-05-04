@@ -342,7 +342,8 @@ h2::after {
     /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    -webkit-background-size: 1920px 960px;
+    -moz-background-size: cover;
     background-position: center center;
     /*object-position: bottom center;*/
 }

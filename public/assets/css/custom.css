@@ -296,7 +296,7 @@ h2::after {
         padding: 0;
     }
     .achievement-div {
-        margin-top: 40px;
+        margin-top: 40px !important;
     }
 
 }
@@ -311,9 +311,7 @@ h2::after {
         top: 0px;
         padding: 0;
     }
-    .achievement-div {
-        margin-top: 40px;
-    }
+    
     .category-style {
         margin-top: 0px;
     }
@@ -337,16 +335,15 @@ h2::after {
         overflow-y: hidden;
     }
     .achievement-sec {
-    z-index: -10;
-    background: url('../../../images/Footer.png');
-    /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
-    background-repeat: no-repeat;
-    background-attachment: initial;
-    -webkit-background-size: 1920px 960px;
-    -moz-background-size: cover;
-    background-position: center center;
-    /*object-position: bottom center;*/
-}
+    background-color: #fff;
+    background-image: none;    
+    }
+
+    .achievement-div {
+        margin-top: 40px;
+    }
+
+
 }
 
 @media (max-width: 425px) {
@@ -363,14 +360,12 @@ h2::after {
         overflow-y: hidden;
     }
     .achievement-sec {
-    z-index: -10;
-    background: url('../../../images/Footer.png');
-    /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
-    background-repeat: no-repeat;
-    background-attachment: initial;
-    -webkit-background-size: 1920px 960px;
-    -moz-background-size: cover;
-    background-position: center center;
-    /*object-position: bottom center;*/
-}
+    background-color: #fff;
+    background-image: none;   
+    
+    }
+
+    .achievement-div {
+        margin-top: 40px;
+    }
 }

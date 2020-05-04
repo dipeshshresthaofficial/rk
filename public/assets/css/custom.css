@@ -37,14 +37,9 @@ body {
     font-size: 18px !important;
 }
 
-<<<<<<< HEAD
 
 /* .rotate-img {
     height: 500px !important;
-=======
-.rotate-img {
-    /* height: 500px !important; */
->>>>>>> 6178e77892082a38f2bc72154811b019132ac574
     transform: rotate(5deg);
 } */
 
@@ -100,6 +95,8 @@ body {
     top: 30px;
 }
 
+
+
 .our-product-sec {
     /* background-color: #FBFCFC; */
 }
@@ -128,20 +125,12 @@ body {
 
 .achievement-sec {
     z-index: -10;
-<<<<<<< HEAD
-    background: url('../../../images/Footer.png') no-repeat center center fixed;
-    background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;
+    background: url('../../../images/Optimized-Full-Footer.jpg') no-repeat center center fixed;
+    /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
     
     background-size: cover;
-=======
-    background: url('../../../images/Footer.png') no-repeat center center fixed !important;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    max-height: 100%;
-    max-width: 100%;
->>>>>>> 6178e77892082a38f2bc72154811b019132ac574
+    object-fit: cover;
+    /*object-position: bottom center;*/
 }
 
 .achievement-sec h5 {
@@ -154,7 +143,7 @@ body {
 /* our company section SLIDER style */
 
 .company-sec {
-    background-image: url('../../../images/RK-wall-mountain.jpeg');
+    background-image: url('../../../images/Optimized-Full-RK-wall-mountain.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -274,7 +263,6 @@ body {
     display: none;
 }
 
-
 /* border bottom on SECTION TITILE */
 
 h2::after {
@@ -296,7 +284,7 @@ h2::after {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 992px) and (max-width: 1023px) {
     /* removing the absolute position of image in service section so that it doesn't overlap other content */
     .service-div {
         margin-top: 30px;
@@ -310,16 +298,28 @@ h2::after {
         margin-top: 40px;
     }
 
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* removing the absolute position of image in service section so that it doesn't overlap other content */
     .service-div {
-        display: flex !important;
-        flex-direction: row !important;
+        margin-top: 30px;
+    }
+    .service-div-img {
+        position: static;
+        top: 0px;
+        padding: 0;
+    }
+    .achievement-div {
+        margin-top: 40px;
+    }
+    .category-style {
+        margin-top: 0px;
     }
 
-    .service-div div[data-child-order="1"]{
-        order: -1 !important;
-    }
-    
 }
+
+
 
 @media (min-width: 426px) and (max-width: 767px) {
     /* our product category section */
@@ -332,18 +332,11 @@ h2::after {
     .category-style {
         margin-top: 0px;
     }
-
-    .service-div {
-        display: flex !important;
-        flex-direction: row !important;
-    }
-
-    .service-div div[data-child-order="1"]{
-        order: -1 !important;
+    .custom-service{
+        overflow-y: hidden;
     }
 }
 
-<<<<<<< HEAD
 @media (max-width: 425px) {
     .service-div {
         margin-top: 30px;
@@ -354,14 +347,7 @@ h2::after {
     .category-style {
         margin-top: 0px;
     }
-=======
-@media only screen and (max-width: 250px) {}
-
-@media only screen and (max-width: 575px)  and (max-width: 768px) {
-    /* .achievement-sec {
-        background-attachment: initial;
-        -webkit-background-attachment: initial;
-    } */
-    
->>>>>>> 6178e77892082a38f2bc72154811b019132ac574
+    .custom-service{
+        overflow-y: hidden;
+    }
 }

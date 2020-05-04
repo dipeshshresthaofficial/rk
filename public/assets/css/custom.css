@@ -125,11 +125,12 @@ body {
 
 .achievement-sec {
     z-index: -10;
-    background: url('../../../images/Optimized-Full-Footer.jpg') no-repeat center center fixed;
+    background: url('../../../images/Optimized-Full-Footer.jpg');
     /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
-    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
-    object-fit: cover;
+    background-position: center center;
     /*object-position: bottom center;*/
 }
 
@@ -335,6 +336,16 @@ h2::after {
     .custom-service{
         overflow-y: hidden;
     }
+    .achievement-sec {
+    z-index: -10;
+    background: url('../../../images/Footer.png');
+    /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    /*object-position: bottom center;*/
+}
 }
 
 @media (max-width: 425px) {

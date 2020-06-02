@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 body {
@@ -94,8 +93,6 @@ body {
     position: relative;
     top: 30px;
 }
-
-
 
 .our-product-sec {
     /* background-color: #FBFCFC; */
@@ -264,6 +261,7 @@ body {
     display: none;
 }
 
+
 /* border bottom on SECTION TITILE */
 
 h2::after {
@@ -298,7 +296,6 @@ h2::after {
     .achievement-div {
         margin-top: 40px !important;
     }
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -311,14 +308,10 @@ h2::after {
         top: 0px;
         padding: 0;
     }
-    
     .category-style {
         margin-top: 0px;
     }
-
 }
-
-
 
 @media (min-width: 426px) and (max-width: 767px) {
     /* our product category section */
@@ -331,19 +324,16 @@ h2::after {
     .category-style {
         margin-top: 0px;
     }
-    .custom-service{
+    .custom-service {
         overflow-y: hidden;
     }
     .achievement-sec {
-    background-color: #fff;
-    background-image: none;    
+        background-color: #fff;
+        background-image: none;
     }
-
     .achievement-div {
         margin-top: 40px;
     }
-
-
 }
 
 @media (max-width: 425px) {
@@ -356,15 +346,13 @@ h2::after {
     .category-style {
         margin-top: 0px;
     }
-    .custom-service{
+    .custom-service {
         overflow-y: hidden;
     }
     .achievement-sec {
-    background-color: #fff;
-    background-image: none;   
-    
+        background-color: #fff;
+        background-image: none;
     }
-
     .achievement-div {
         margin-top: 40px;
     }

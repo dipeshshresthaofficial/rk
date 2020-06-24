@@ -45,7 +45,8 @@ body {
 
 #header-sec {
     position: relative;
-    height: 90vh;
+    height: 100%;
+    padding-bottom: 380px;
 }
 
 .main-slider {
@@ -76,70 +77,36 @@ body {
 }
 
 
-/* .main-slider::before {
-    content: '';
-    position: absolute;
-    border-top: 20px solid;
-    top: -5px;
-    width: 100%;
-    border-color: rgba(255, 255, 255, 0.30);
-    border-radius: 6px;
-} */
-
-
-/* .main-slider:hover {
-    animation-name: zoomIn;
-    animation-duration: 2s;
-    animation-delay: .5s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-.main-slider:not(:hover) {
-    animation-name: zoomOut;
-    animation-duration: 2s;
-    animation-delay: .5s;
-    animation-timing-function: ease;
-    animation-fill-mode: backwards;
-} */
-
-
-/* @keyframes zoomIn {
-    0% {
-        transform: scale(1, 1);
-    }
-    100% {
-        transform: scale(1.2, 1.2);
-    }
-}
-
-@keyframes zoomOut {
-    0% {
-        transform: scale(1.2, 1.2);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
-} */
-
-
 /* our service section style */
 
 #service-sec {
     background-color: rgb(237, 245, 240);
+    position: relative;
+    z-index: -88888;
+    padding-bottom: 80px !important;
 }
 
 #service-sec h2 {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .service-div {
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
+
+/* align service images vertically centered  */
+
 .service-div-img {
-    position: relative;
-    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-div-img-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .our-product-sec {
@@ -168,7 +135,7 @@ body {
 
 /* our Achievement section style */
 
-.achievement-sec {
+#achievement-sec {
     z-index: -10;
     background: url('../../../images/Optimized-Full-Footer.jpg');
     /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
@@ -176,10 +143,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    /*object-position: bottom center;*/
+    overflow-x: hidden;
 }
 
-.achievement-sec h5 {
+#achievement-sec h5 {
     /* font-size: 12px; */
     font-weight: bold;
     color: green;
@@ -323,37 +290,29 @@ h2::after {
     display: block;
 }
 
-@media (min-width: 1024px) {
-    .service-div-img {
-        position: static;
-        top: 0px;
-        padding: 50px 0;
+@media (min-width: 992px) and (max-width: 1200px) {
+    #header-sec {
+        padding-bottom: 340px;
     }
-}
-
-@media (min-width: 992px) and (max-width: 1023px) {
-    /* removing the absolute position of image in service section so that it doesn't overlap other content */
-    .service-div {
-        margin-top: 30px;
+    .main-slider {
+        width: 400px;
+        height: 600px;
+        position: absolute;
+        right: 5%;
     }
-    .service-div-img {
-        position: static;
-        top: 0px;
-        padding: 0;
+    .temp {
+        position: absolute;
+        top: 30%;
+        right: 10%;
     }
-    .achievement-div {
-        margin-top: 40px !important;
+    .slider-img {
+        width: 350px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .temp {
-        position: absolute;
-        top: -100px;
-        left: 25%;
-    }
-    .slider-img {
-        width: 440px;
+    #header-sec {
+        padding-bottom: 340px;
     }
     /* removing the absolute position of image in service section so that it doesn't overlap other content */
     .main-slider {
@@ -364,20 +323,39 @@ h2::after {
         top: 50%;
         right: 5%;
     }
+    .temp {
+        position: absolute;
+        top: -100px;
+        left: 25%;
+    }
+    .slider-img {
+        width: 440px;
+    }
+    #service-sec {
+        padding-bottom: 40px !important;
+    }
     .service-div {
         margin-top: 30px;
     }
     .service-div-img {
         position: static;
         top: 0px;
-        padding: 0;
+        padding-bottom: 25px;
+    }
+    .service-div-img-right {
+        position: absolute;
+        top: 54.5%;
+        right: 0.3%;
+    }
+    #retail-desc {
+        margin-top: 265px;
     }
     .category-style {
         margin-top: 0px;
     }
 }
 
-@media (min-width: 501px) and (max-width: 767px) {
+@media (min-width: 426px) and (max-width: 767px) {
     .main-slider {
         justify-content: center;
         height: 400px;
@@ -410,7 +388,7 @@ h2::after {
     .custom-service {
         overflow-y: hidden;
     }
-    .achievement-sec {
+    #achievement-sec {
         background-color: #fff;
         background-image: none;
     }
@@ -419,14 +397,17 @@ h2::after {
     }
 }
 
-@media (max-width: 500px) {
+@media (min-width:376px) and (max-width: 425px) {
+    #header-sec {
+        padding-bottom: 320px;
+    }
     .main-slider {
         justify-content: center;
         height: 400px;
         width: 400px;
         position: absolute;
         top: 50%;
-        right: 8%;
+        right: 2%;
     }
     .temp {
         position: absolute;
@@ -436,27 +417,149 @@ h2::after {
     .slider-img {
         width: 350px;
     }
-    /* our product category section */
+    /* our product service section */
+    #service-sec {
+        padding-bottom: 40px !important;
+    }
     #service-sec h2 {
-        margin-top: 50px;
+        padding-top: 20px;
     }
     .service-div {
         margin-top: 30px;
     }
-    .service-img {
-        margin-bottom: 100px !important;
+    .service-div-img {
+        position: static;
+        top: 0px;
+        padding-bottom: 25px;
     }
+    .service-div-img-right {
+        position: absolute;
+        top: 53.5%;
+        right: 0.3%;
+    }
+    #retail-desc {
+        margin-top: 265px;
+    }
+    /* category section style */
     .category-style {
         margin-top: 0px;
     }
     .custom-service {
         overflow-y: hidden;
     }
-    .achievement-sec {
+    #achievement-sec {
         background-color: #fff;
         background-image: none;
     }
     .achievement-div {
         margin-top: 40px;
+    }
+}
+
+@media (min-width:321px) and (max-width: 375px) {
+    #header-sec {
+        padding-bottom: 300px;
+    }
+    .main-slider {
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        width: 350px;
+        height: 350px;
+    }
+    .temp {
+        position: absolute;
+        right: 10%;
+    }
+    .slider-img {
+        width: 300px;
+    }
+    /* service section style */
+    #service-sec {
+        padding-bottom: 40px !important;
+    }
+    .service-div {
+        margin-top: 30px;
+    }
+    .service-div-img {
+        position: static;
+        top: 0px;
+        padding-bottom: 25px;
+        margin-top: 10px;
+    }
+    .service-div-img-right {
+        position: absolute;
+        top: 53%;
+        right: 0.3%;
+    }
+    .service-img-right {
+        width: 290px;
+    }
+    #retail-desc {
+        margin-top: 220px;
+    }
+    /* category section style */
+    #category-sec {
+        padding-bottom: 30px !important;
+    }
+    .category-style {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 320px) {
+    #header-sec {
+        padding-bottom: 300px;
+    }
+    .header-ele {
+        margin-top: 0px !important;
+    }
+    .header-ele h1 {
+        font-size: 1.9em;
+    }
+    .main-slider {
+        width: 300px;
+        height: 350px;
+        position: absolute;
+        top: 50%;
+        right: 3%;
+    }
+    .temp {
+        position: absolute;
+        right: 10%;
+    }
+    .slider-img {
+        width: 250px;
+    }
+    /* service section style */
+    #service-sec {
+        padding-bottom: 40px !important;
+    }
+    .service-div {
+        margin-top: 30px;
+    }
+    .service-div-img {
+        position: static;
+        top: 0px;
+        padding-bottom: 25px;
+        margin-top: 10px;
+    }
+    .service-div-img-right {
+        position: absolute;
+        top: 52.5%;
+        right: 0.3%;
+    }
+    .service-img-right {
+        width: 250px;
+    }
+    #retail-desc {
+        margin-top: 190px;
+    }
+    /* category section style */
+    #category-sec {
+        padding-bottom: 30px !important;
+    }
+    .category-style {
+        margin-top: 0px;
     }
 }

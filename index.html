@@ -12,6 +12,8 @@
     <title>Auto Parts | Radha Krishna Auto Parts - Butwal</title>
 
 
+    <!-- Swiper JS css link -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- bootstrap links -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -140,6 +142,24 @@
         </div>
     </section>
     <!-- our Services end -->
+
+    <!-- Highligh Poduct Section -->
+    <div id="highlight-product-sec">
+        <div class="text-center pt-4">
+            <h2>Highlight Product</h2>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/swiper/horn-vector.png"></div>
+                <div class="swiper-slide"><img src="./images/swiper/lightbar-vector.png"></div>
+                <div class="swiper-slide"><img src="./images/swiper/combination-vector.png"></div>
+
+            </div>
+
+
+        </div>
+    </div>
 
     <!-- our Product Category section -->
     <section class="container-fluid" id="category-sec">
@@ -356,6 +376,26 @@
         });
     </script>
 
+    <!-- Swiper JS -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 250,
+            centeredSlides: true,
+            grabCursor: true,
+            speed: 2000,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+        });
+    </script>
 </body>
 
 </html>

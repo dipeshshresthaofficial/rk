@@ -488,7 +488,7 @@
         }
         .swiper-slide {
             width: 140px;
-            height: 140px !important;
+            height: 150px !important;
             /* border: 1px solid black; */
         }
         /* category section style */
@@ -559,7 +559,7 @@
         }
         .swiper-slide {
             width: 100px;
-            height: 100px !important;
+            height: 120px !important;
             /* border: 1px solid black; */
         }
         /* category section style */

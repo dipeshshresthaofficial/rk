@@ -164,19 +164,34 @@
     
     #achievement-sec {
         z-index: -10;
-        background: url('../../../images/Optimized-Full-Footer.jpg');
+        /* background: url('../../../images/Optimized-Full-Footer.jpg'); */
         /*background: -webkit-url('../../../images/Footer.png') no-repeat center center fixed;*/
-        background-attachment: fixed;
+        /* background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        overflow-x: hidden;
+        overflow-x: hidden; */
+        background-color: #fff;
+        min-height: 350px;
     }
     
     #achievement-sec h5 {
         /* font-size: 12px; */
         font-weight: bold;
         color: green;
+    }
+    
+    .shape {
+        position: relative;
+        text-align: center;
+        width: 200px;
+        height: 20px;
+        margin: 20px auto;
+    }
+    
+    .counter {
+        font-size: 40px;
+        /* color: orangered; */
     }
     /* our company section SLIDER style */
     
@@ -427,8 +442,8 @@
             /* border: 1px solid black; */
         }
         #achievement-sec {
-            background-color: #fff;
-            background-image: none;
+            /* background-color: #fff;
+            background-image: none; */
         }
         .achievement-div {
             margin-top: 40px;
@@ -499,8 +514,8 @@
             overflow-y: hidden;
         }
         #achievement-sec {
-            background-color: #fff;
-            background-image: none;
+            /* background-color: #fff;
+            background-image: none; */
         }
         .achievement-div {
             margin-top: 40px;

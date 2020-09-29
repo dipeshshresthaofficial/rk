@@ -1,8 +1,91 @@
+//Product Category Section
+
+let mirror_ref = document.getElementById("mirror");
+let light_ref = document.getElementById("light");
+let accessories_ref = document.getElementById("accessories");
+let electrical_ref = document.getElementById("electrical");
+
+let mirror_btn_ref = document.getElementById("mirror_btn");
+let light_btn_ref = document.getElementById("light_btn");
+let accessories_btn_ref = document.getElementById("accessories_btn");
+let electrical_btn_ref = document.getElementById("electrical_btn");
+
+mirror_btn_ref.addEventListener('click', (e) => {
+    light_ref.style.position = "absolute";
+    light_ref.style.top = "-9999px";
+    light_ref.style.left = "-9999px";
+    mirror_ref.style.position = "relative";
+    mirror_ref.style.top = "0";
+    mirror_ref.style.left = "0";
+    accessories_ref.style.position = "absolute";
+    accessories_ref.style.top = "-9999px";
+    accessories_ref.style.left = "-9999px";
+    electrical_ref.style.position = "absolute";
+    electrical_ref.style.top = "-9999px";
+    electrical_ref.style.left = "-9999px";
+
+
+});
+
+light_btn_ref.addEventListener('click', (e) => {
+
+    mirror_ref.style.position = "absolute";
+    mirror_ref.style.top = "-9999px";
+    mirror_ref.style.left = "-9999px";
+    light_ref.style.position = "relative";
+    light_ref.style.top = "0";
+    light_ref.style.left = "0";
+    accessories_ref.style.position = "absolute";
+    accessories_ref.style.top = "-9999px";
+    accessories_ref.style.left = "-9999px";
+    electrical_ref.style.position = "absolute";
+    electrical_ref.style.top = "-9999px";
+    electrical_ref.style.left = "-9999px";
+
+
+});
+accessories_btn_ref.addEventListener('click', (e) => {
+
+    mirror_ref.style.position = "absolute";
+    mirror_ref.style.top = "-9999px";
+    mirror_ref.style.left = "-9999px";
+    light_ref.style.position = "absolute";
+    light_ref.style.top = "-9999px";
+    light_ref.style.left = "-9999px";
+    accessories_ref.style.position = "relative";
+    accessories_ref.style.top = "0";
+    accessories_ref.style.left = "0";
+    electrical_ref.style.position = "absolute";
+    electrical_ref.style.top = "-9999px";
+    electrical_ref.style.left = "-9999px";
+
+
+});
+electrical_btn_ref.addEventListener('click', (e) => {
+
+    mirror_ref.style.position = "absolute";
+    mirror_ref.style.top = "-9999px";
+    mirror_ref.style.left = "-9999px";
+    light_ref.style.position = "absolute";
+    light_ref.style.top = "-9999px";
+    light_ref.style.left = "-9999px";
+    accessories_ref.style.position = "absolute";
+    accessories_ref.style.top = "-9999px";
+    accessories_ref.style.left = "-9999px";
+    electrical_ref.style.position = "relative";
+    electrical_ref.style.top = "0";
+    electrical_ref.style.left = "0";
+
+
+});
+
+
+
+
+
+
+
 //Our achievement Section UPCOUNTER script
-
-
-
-
 window.onscroll = (e) => {
 
     if (document.documentElement.scrollTop > 2900) {

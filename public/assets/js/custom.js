@@ -86,34 +86,39 @@ electrical_btn_ref.addEventListener('click', (e) => {
 
 
 //Our achievement Section UPCOUNTER script
-window.onscroll = (e) => {
-
-    if (document.documentElement.scrollTop > 2900) {
-        // console.log("Counter Running ");
-
-        const counters = document.querySelectorAll('.counter');
-        const speed = 20000;
 
 
-        counters.forEach((counter) => {
+window.addEventListener('DOMContentLoaded', (event) => {
 
-            const updateCount = () => {
+    window.addEventListener('scroll', (e) => {
 
-                const targetValue = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
+        if (document.documentElement.scrollTop > 2900) {
+            // console.log("Counter Running ");
 
-                let inc = targetValue / speed;
+            const counters = document.querySelectorAll('.counter');
+            const speed = 20000;
 
-                if (count < targetValue) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(updateCount, 70);
-                } else {
-                    counter.innerText = targetValue;
+
+            counters.forEach((counter) => {
+
+                const updateCount = () => {
+
+                    const targetValue = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+
+                    let inc = targetValue / speed;
+
+                    if (count < targetValue) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 70);
+                    } else {
+                        counter.innerText = targetValue;
+                    }
                 }
-            }
 
-            updateCount();
-        });
-    }
-    // console.log(document.documentElement.scrollTop);
-};
+                updateCount();
+            });
+        }
+        // console.log(document.documentElement.scrollTop);
+    });
+});

@@ -118,31 +118,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     });
 
-    const anim = document.getElementById("wholesale-container");
-    window.addEventListener('scroll', (e) => {
-        if (window.scrollY >= 380) {
-            anim.style.opacity = '1';
-            anim.style.transform = 'translateY(-50px)';
-            anim.style.transition = '1s ease-in';
+    // const anim = document.querySelectorAll(".service-div");
+    // window.addEventListener('scroll', (e) => {
+    //     if (window.scrollY >= 380) {
+    //         anim.style.opacity = '1';
+    //         anim.style.transform = 'translateY(-50px)';
+    //         anim.style.transition = '1s ease-in';
 
-        } else {
-            anim.style.opacity = '0';
-            anim.style.transform = 'translateX(0px)';
-        }
-    });
-    const anim2 = document.getElementById("retail-container");
-    window.addEventListener('scroll', (e) => {
-        console.log(window.scrollY);
-        if (window.scrollY >= 700) {
-            anim2.style.opacity = '1';
-            anim2.style.transform = 'translateY(-50px)';
-            anim2.style.transition = '1s ease-in';
-
-        } else {
-            anim2.style.opacity = '0';
-            anim2.style.transform = 'translateX(0px)';
-        }
-    });
+    //     } else {
+    //         anim.style.opacity = '0';
+    //         anim.style.transform = 'translateX(0px)';
+    //     }
+    // });
 
 
 });

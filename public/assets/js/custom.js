@@ -98,10 +98,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener('scroll', productSecAnimation);
     const animate = document.querySelectorAll(".product-animation");
 
+    let categorySec = document.querySelector('#category-sec');
+
     function productSecAnimation() {
 
-        // console.log(window.scrollY); 
-        if (window.scrollY >= 1870) {
+        if (window.scrollY >= (categorySec.offsetTop - window.innerHeight)) {
             animate.forEach(anim => {
 
                 anim.style.opacity = '1';

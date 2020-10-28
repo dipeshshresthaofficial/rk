@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                     if (count < targetValue) {
                         counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 70);
+                        setTimeout(updateCount, 1200);
                     } else {
                         counter.innerText = targetValue;
                     }

@@ -38,6 +38,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     //Product Category Section
 
+
+
     let mirror_ref = document.getElementById("mirror");
     let light_ref = document.getElementById("light");
     let accessories_ref = document.getElementById("accessories");
@@ -49,87 +51,75 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let electrical_btn_ref = document.getElementById("electrical_btn");
 
     mirror_btn_ref.addEventListener('click', (e) => {
-        light_ref.style.position = "absolute";
-        // light_ref.style.top = "-9999px";
-        light_ref.style.left = "-9999px";
-        mirror_ref.style.position = "relative";
-        mirror_ref.style.top = "0";
-        mirror_ref.style.left = "0";
-        accessories_ref.style.position = "absolute";
-        // accessories_ref.style.top = "-9999px";
-        accessories_ref.style.left = "-9999px";
-        electrical_ref.style.position = "absolute";
-        // electrical_ref.style.top = "-9999px";
-        electrical_ref.style.left = "-9999px";
 
 
+        accessories_ref.style.display = "none";
+        electrical_ref.style.display = "none";
+        light_ref.style.display = "none";
+        // productSecAnimation();
+        mirror_ref.style.animation = "fade-up 2s ease";
+        mirror_ref.style.display = "flex";
     });
 
     light_btn_ref.addEventListener('click', (e) => {
 
-        mirror_ref.style.position = "absolute";
-        // mirror_ref.style.top = "-9999px";
-        mirror_ref.style.left = "-9999px";
-        light_ref.style.position = "relative";
-        light_ref.style.top = "0";
-        light_ref.style.left = "0";
-        accessories_ref.style.position = "absolute";
-        // accessories_ref.style.top = "-9999px";
-        accessories_ref.style.left = "-9999px";
-        electrical_ref.style.position = "absolute";
-        // electrical_ref.style.top = "-9999px";
-        electrical_ref.style.left = "-9999px";
+        mirror_ref.style.display = "none";
+        accessories_ref.style.display = "none";
+        electrical_ref.style.display = "none";
+
+        light_ref.style.animation = "fade-up 2s ease";
+        light_ref.style.display = "flex";
+        // productSecAnimation();
+
 
 
     });
     accessories_btn_ref.addEventListener('click', (e) => {
+        mirror_ref.style.display = "none";
+        electrical_ref.style.display = "none";
+        light_ref.style.display = "none";
 
-        mirror_ref.style.position = "absolute";
-        // mirror_ref.style.top = "-9999px";
-        mirror_ref.style.left = "-9999px";
-        light_ref.style.position = "absolute";
-        // light_ref.style.top = "-9999px";
-        light_ref.style.left = "-9999px";
-        accessories_ref.style.position = "relative";
-        accessories_ref.style.top = "0";
-        accessories_ref.style.left = "0";
-        electrical_ref.style.position = "absolute";
-        // electrical_ref.style.top = "-9999px";
-        electrical_ref.style.left = "-9999px";
+        accessories_ref.style.animation = "fade-up 2s ease";
+        accessories_ref.style.display = "flex";
 
 
     });
     electrical_btn_ref.addEventListener('click', (e) => {
 
-        mirror_ref.style.position = "absolute";
-        // mirror_ref.style.top = "-9999px";
-        mirror_ref.style.left = "-9999px";
-        light_ref.style.position = "absolute";
-        // light_ref.style.top = "-9999px";
-        light_ref.style.left = "-9999px";
-        accessories_ref.style.position = "absolute";
-        // accessories_ref.style.top = "-9999px";
-        accessories_ref.style.left = "-9999px";
+        mirror_ref.style.display = "none";
+        accessories_ref.style.display = "none";
 
-        electrical_ref.style.position = "relative";
-        electrical_ref.style.top = "0";
-        electrical_ref.style.left = "0";
-
+        light_ref.style.display = "none";
+        electrical_ref.style.animation = "fade-up 2s ease";
+        electrical_ref.style.display = "flex";
 
     });
 
-    // const anim = document.querySelectorAll(".service-div");
-    // window.addEventListener('scroll', (e) => {
-    //     if (window.scrollY >= 380) {
-    //         anim.style.opacity = '1';
-    //         anim.style.transform = 'translateY(-50px)';
-    //         anim.style.transition = '1s ease-in';
+    window.addEventListener('scroll', productSecAnimation);
+    const animate = document.querySelectorAll(".product-animation");
 
-    //     } else {
-    //         anim.style.opacity = '0';
-    //         anim.style.transform = 'translateX(0px)';
-    //     }
-    // });
+    function productSecAnimation() {
+
+        console.log(window.scrollY);
+        if (window.scrollY >= 1870) {
+            animate.forEach(anim => {
+
+                anim.style.opacity = '1';
+                anim.style.transform = 'translateY(-35px)';
+                anim.style.transition = '1.5s ease-in';
+            })
+
+        } else {
+            animate.forEach(anim => {
+
+                anim.style.opacity = '0';
+                anim.style.transform = 'translateX(0px)';
+            })
+        }
+    };
+
+
+
 
 
 });

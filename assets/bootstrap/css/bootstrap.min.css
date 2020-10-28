@@ -632,7 +632,9 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-left: -15px
+    /* This two style created a problem of overflow-x and Centering problem so i commented it out */
+    /* margin-right: -15px;
+    margin-left: -15px */
 }
 
 .no-gutters {

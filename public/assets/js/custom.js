@@ -100,20 +100,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     function productSecAnimation() {
 
-        console.log(window.scrollY);
+        // console.log(window.scrollY); 
         if (window.scrollY >= 1870) {
             animate.forEach(anim => {
 
                 anim.style.opacity = '1';
-                anim.style.transform = 'translateY(-35px)';
-                anim.style.transition = '1.5s ease-in';
+                anim.style.transform = 'translateY(0px)';
+                anim.style.transition = '1.5s ease-out';
             })
 
         } else {
             animate.forEach(anim => {
 
                 anim.style.opacity = '0';
-                anim.style.transform = 'translateX(0px)';
+                anim.style.transform = 'translateY(80px)';
             })
         }
     };

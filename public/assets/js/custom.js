@@ -4,12 +4,13 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
     window.addEventListener('scroll', (e) => {
-
-        if (document.documentElement.scrollTop > 2900) {
+        const achievementSecRef = document.getElementById("achievement-sec");
+        if (window.scrollY >= (achievementSecRef.offsetTop - achievementSecRef.clientHeight)) {
             // console.log("Counter Running ");
+            // console.log(document.scrollY);
 
             const counters = document.querySelectorAll('.counter');
-            const speed = 20000;
+            const speed = 2000;
 
 
             counters.forEach((counter) => {
@@ -23,7 +24,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                     if (count < targetValue) {
                         counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 70);
+                        setTimeout(updateCount, 2000);
                     } else {
                         counter.innerText = targetValue;
                     }

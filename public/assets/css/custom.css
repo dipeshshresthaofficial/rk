@@ -6,7 +6,6 @@
                 
                 body {
                     font-family: 'Montserrat', sans-serif;
-                    overflow-x: hidden;
                 }
                 /* #header-sec {
     height: 970px;
@@ -385,8 +384,9 @@
                 /*Footer SEction starts  */
                 
                 #footer-sec {
-                    padding: 80px 30px 30px 80px;
+                    padding: 80px 30px 30px 30px;
                     background-color: rgba(239, 239, 239, 0.3);
+                    position: relative;
                 }
                 
                 #form-container {

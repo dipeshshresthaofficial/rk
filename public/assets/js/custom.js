@@ -1,130 +1,139 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener("DOMContentLoaded", (event) => {
+  // Dark mode script
+  // s
 
+  //Product Category Section SCRIPT starts here
 
-    // Dark mode script
-    // s 
+  let mirror_ref = document.getElementById("mirror");
+  let light_ref = document.getElementById("light");
+  let accessories_ref = document.getElementById("accessories");
+  let electrical_ref = document.getElementById("electrical");
 
-    //Our achievement Section UPCOUNTER script
+  let mirror_btn_ref = document.getElementById("mirror_btn");
+  let light_btn_ref = document.getElementById("light_btn");
+  let accessories_btn_ref = document.getElementById("accessories_btn");
+  let electrical_btn_ref = document.getElementById("electrical_btn");
 
-    window.addEventListener('scroll', (e) => {
-        const achievementSecRef = document.getElementById("achievement-sec");
-        if (window.scrollY >= (achievementSecRef.offsetTop - 400)) {
-            console.log("Counter Running ");
-            // console.log(document.scrollY);
+  mirror_btn_ref.addEventListener("click", (e) => {
+    accessories_ref.style.display = "none";
+    electrical_ref.style.display = "none";
+    light_ref.style.display = "none";
+    // productSecAnimation();
+    mirror_ref.style.animation = "fade-up 2s ease";
+    mirror_ref.style.display = "flex";
+  });
 
-            const counters = document.querySelectorAll('.counter');
-            const speed = 2000;
+  light_btn_ref.addEventListener("click", (e) => {
+    mirror_ref.style.display = "none";
+    accessories_ref.style.display = "none";
+    electrical_ref.style.display = "none";
 
+    light_ref.style.animation = "fade-up 2s ease";
+    light_ref.style.display = "flex";
+    // productSecAnimation();
+  });
+  accessories_btn_ref.addEventListener("click", (e) => {
+    mirror_ref.style.display = "none";
+    electrical_ref.style.display = "none";
+    light_ref.style.display = "none";
 
-            counters.forEach((counter) => {
+    accessories_ref.style.animation = "fade-up 2s ease";
+    accessories_ref.style.display = "flex";
+  });
+  electrical_btn_ref.addEventListener("click", (e) => {
+    mirror_ref.style.display = "none";
+    accessories_ref.style.display = "none";
 
-                const updateCount = () => {
+    light_ref.style.display = "none";
+    electrical_ref.style.animation = "fade-up 2s ease";
+    electrical_ref.style.display = "flex";
+  });
 
-                    const targetValue = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
+  const animate = document.querySelectorAll(".product-animation");
+  window.addEventListener("scroll", productSecAnimation);
 
-                    let inc = targetValue / speed;
+  let categorySec = document.querySelector("#category-sec");
 
-                    if (count < targetValue) {
-                        counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 1200);
-                    } else {
-                        counter.innerText = targetValue;
-                    }
-                }
+  function productSecAnimation() {
+    if (window.scrollY >= categorySec.offsetTop - (window.innerHeight - 350)) {
+      animate.forEach((anim) => {
+        anim.style.opacity = "1";
+        anim.style.transform = "translateY(0px)";
+        anim.style.transition = "0.8s ease";
+      });
+    } else {
+      animate.forEach((anim) => {
+        anim.style.opacity = "0";
+        anim.style.transform = "translateY(80px)";
+      });
+    }
+  }
 
-                updateCount();
-            });
-        }
-        // console.log(document.documentElement.scrollTop);
-    });
+  //Our achievement Section UPCOUNTER script
 
+  window.addEventListener("scroll", (e) => {
+    const achievementSecRef = document.getElementById("achievement-sec");
+    if (window.scrollY >= achievementSecRef.offsetTop - 400) {
+      //   console.log("Counter Running ");
+      // console.log(document.scrollY);
 
-    //Product Category Section
+      const counters = document.querySelectorAll(".counter");
+      const speed = 2000;
 
+      counters.forEach((counter) => {
+        const updateCount = () => {
+          const targetValue = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
 
+          let inc = targetValue / speed;
 
-    let mirror_ref = document.getElementById("mirror");
-    let light_ref = document.getElementById("light");
-    let accessories_ref = document.getElementById("accessories");
-    let electrical_ref = document.getElementById("electrical");
+          if (count < targetValue) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(updateCount, 1200);
+          } else {
+            counter.innerText = targetValue + "+";
+          }
+        };
 
-    let mirror_btn_ref = document.getElementById("mirror_btn");
-    let light_btn_ref = document.getElementById("light_btn");
-    let accessories_btn_ref = document.getElementById("accessories_btn");
-    let electrical_btn_ref = document.getElementById("electrical_btn");
+        updateCount();
+      });
+    }
+    // console.log(document.documentElement.scrollTop);
+  });
 
-    mirror_btn_ref.addEventListener('click', (e) => {
+  //Our TEAM secion Script starts here
 
+  const ownerBtnRef = document.getElementById("owner-btn");
+  const internBtnRef = document.getElementById("intern-btn");
+  const ownerContainerRef = document.getElementById("owner-container");
+  const internContainerRef = document.getElementById("intern-container");
 
-        accessories_ref.style.display = "none";
-        electrical_ref.style.display = "none";
-        light_ref.style.display = "none";
-        // productSecAnimation();
-        mirror_ref.style.animation = "fade-up 2s ease";
-        mirror_ref.style.display = "flex";
-    });
+  ownerBtnRef.addEventListener("click", (e) => {
+    internContainerRef.style.display = "none";
+    ownerContainerRef.style.display = "block";
+    ownerContainerRef.style.animation="show-on 2s ease";
+  });
+  internBtnRef.addEventListener("click", (e) => {
+    ownerContainerRef.style.display = "none";
+    internContainerRef.style.display = "block";
+    internContainerRef.style.animation="show-on 2s ease-in";
+  });
 
-    light_btn_ref.addEventListener('click', (e) => {
-
-        mirror_ref.style.display = "none";
-        accessories_ref.style.display = "none";
-        electrical_ref.style.display = "none";
-
-        light_ref.style.animation = "fade-up 2s ease";
-        light_ref.style.display = "flex";
-        // productSecAnimation();
-
-
-
-    });
-    accessories_btn_ref.addEventListener('click', (e) => {
-        mirror_ref.style.display = "none";
-        electrical_ref.style.display = "none";
-        light_ref.style.display = "none";
-
-        accessories_ref.style.animation = "fade-up 2s ease";
-        accessories_ref.style.display = "flex";
-
-
-    });
-    electrical_btn_ref.addEventListener('click', (e) => {
-
-        mirror_ref.style.display = "none";
-        accessories_ref.style.display = "none";
-
-        light_ref.style.display = "none";
-        electrical_ref.style.animation = "fade-up 2s ease";
-        electrical_ref.style.display = "flex";
-
-    });
-
-    window.addEventListener('scroll', productSecAnimation);
-    const animate = document.querySelectorAll(".product-animation");
-
-    let categorySec = document.querySelector('#category-sec');
-
-    function productSecAnimation() {
-
-        if (window.scrollY >= (categorySec.offsetTop - window.innerHeight)) {
-            animate.forEach(anim => {
-
-                anim.style.opacity = '1';
-                anim.style.transform = 'translateY(0px)';
-                anim.style.transition = '1.5s ease-out';
-            })
-
-        } else {
-            animate.forEach(anim => {
-
-                anim.style.opacity = '0';
-                anim.style.transform = 'translateY(80px)';
-            })
-        }
-    };
-
-
-
-
-
+  window.addEventListener("scroll", teamAnimation);
+  function teamAnimation() {
+    let teamSecRef = document.getElementById("team-sec");
+    const teamAnimate = document.querySelectorAll(".team-container");
+    if (window.scrollY >= teamSecRef.offsetTop - (window.innerHeight - 200)) {
+      teamAnimate.forEach((anim) => {
+        anim.style.opacity = "1";
+        anim.style.transform = "translateY(0px)";
+        anim.style.transition = "1.5s ease";
+      });
+    } else {
+      teamAnimate.forEach((anim) => {
+        anim.style.opacity = "0";
+        anim.style.transform = "translateY(80px)";
+      });
+    }
+  }
 });

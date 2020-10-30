@@ -135,7 +135,7 @@
                 
                 .swiper-slide {
                     width: 200px;
-                    height: 250px !important;
+                    height: 200px !important;
                     /* border: 1px solid black; */
                 }
                 
@@ -273,8 +273,77 @@
                     font-size: 40px;
                     /* color: orangered; */
                 }
-                /* our company section SLIDER style */
                 
+
+                /* Our Team Section Starts here */
+
+                #team-sec{
+                    min-height: 450px;
+                    margin-top: 40px;
+                    position: relative;
+                }
+                #team-sec h2{
+                    text-align: center;
+                }
+                #team-btn{
+                    position: absolute;
+                    top: 15%;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                }
+                #team-btn button{
+                    border: none;
+                    outline: none;
+                    text-decoration: none;
+                    margin-right: 40px;
+                    padding: 8px 20px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+
+                .team-container{
+                    position: relative;
+                    /* position: absolute;
+                    top: 32%;
+                    left: 0;
+                    right: 0; */
+                    margin-top: 100px;
+                    text-align: center;
+                }
+                .team-container>div{
+                    display: inline-block;
+                    margin-right: 30px; 
+                    padding: 30px 0;
+                }
+                .team-container div img{
+                    object-fit: cover;
+                    width: 200px; 
+                    height: 200px;
+                    display: block;
+                    margin-bottom: 15px; 
+                    border-radius: 50%;
+                }
+                #owner-container{
+                    /* background-color: #FF4500; */
+                    /* height: 47vh; */
+                    display: block;
+                }
+                #intern-container{
+                    /* background-color: aqua; */
+                    /* height: 47vh; */
+                    display: none;
+                }
+                
+                @keyframes show-on{
+                    from{
+                        opacity: 0;
+                    }
+                    to{
+                        opacity: 1;
+                    }
+                }
+                /* Company Partner Section Starts here */
                 .company-sec {
                     background-image: url('../../../images/Optimized-Full-RK-wall-mountain.jpeg');
                     background-repeat: no-repeat;
@@ -603,7 +672,7 @@
                         padding-top: 1px;
                     }
                     #product_btn {
-                        top: 5%;
+                        top: 5%;    
                     }
                     #grid-container {
                         grid-template-areas: 'form form''desc desc''map map';
@@ -754,6 +823,10 @@
                     .achievement-div {
                         margin-top: 40px;
                     }
+/* our team section */
+#team-btn{
+    top: 6%;
+}
                     /* footer section */
                     #grid-container {
                         grid-template-areas: 'form form''desc desc''map map';
@@ -831,6 +904,10 @@
                     #product_btn {
                         top: 3%;
                     }
+                    /* our team section */
+                    #team-btn{
+                        top: 6%;
+                    }
                     /* footer section */
                     #grid-container {
                         grid-template-areas: 'form form''desc desc''map map';
@@ -906,6 +983,10 @@
                     }
                     .category-style {
                         margin-top: 0px;
+                    }
+                    /* our team section */
+                    #team-btn{
+                        top: 6%;
                     }
                     /* footer section */
                     #grid-container {

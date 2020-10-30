@@ -1,7 +1,10 @@
-//Our achievement Section UPCOUNTER script
-
-
 window.addEventListener('DOMContentLoaded', (event) => {
+
+
+    // Dark mode script
+    // s 
+
+    //Our achievement Section UPCOUNTER script
 
     window.addEventListener('scroll', (e) => {
         const achievementSecRef = document.getElementById("achievement-sec");

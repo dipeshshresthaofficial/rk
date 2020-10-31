@@ -1,14 +1,24 @@
 window.addEventListener("DOMContentLoaded", (event) => {
 
+// top scroller script
+document.getElementById('top-scroller').addEventListener('click',e=>{
+
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});
+
+
   // Navigation Bar shrink on scroll below 80px from top of document
 window.onscroll = function () {
   navBarStyle();
 }
 function navBarStyle(){
-  console.log(document.querySelector('.navbar'));
+  // console.log(document.querySelector('.navbar'));
   if(document.body.scrollTop > 80 || document.documentElement.scrollTop>80){
     document.getElementById('logo-img').style.height = "60px";
     document.getElementById('logo-img').style.width = "60px";
+    
+    document.querySelector('.navbar').style.transition = "0.3s ease-in";
     document.querySelector('.navbar').style.padding = "0rem 1rem";
     document.querySelector('.navbar').style.backgroundColor = "rgba(999, 999, 999, 0.9)";
     
@@ -134,11 +144,17 @@ function navBarStyle(){
     internContainerRef.style.display = "none";
     ownerContainerRef.style.display = "block";
     ownerContainerRef.style.animation="show-on 2s ease";
+    internBtnRef.classList.remove("team-btn-active");
+    ownerBtnRef.classList.add("team-btn-active");
+    ownerBtnRef.style.transition="0.3s ease-in";
   });
   internBtnRef.addEventListener("click", (e) => {
+    internBtnRef.style.transition="0.3s ease-in";
     ownerContainerRef.style.display = "none";
     internContainerRef.style.display = "block";
     internContainerRef.style.animation="show-on 2s ease-in";
+    ownerBtnRef.classList.remove("team-btn-active");
+    internBtnRef.classList.add("team-btn-active");
   });
 
   window.addEventListener("scroll", teamAnimation);

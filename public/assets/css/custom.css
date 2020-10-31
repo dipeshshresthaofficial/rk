@@ -10,6 +10,24 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+/* top Scroller */
+#top-scroller{
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  z-index: 999999;
+  cursor: pointer;
+  padding: 8px;
+  /* border: 0.5px solid grey;
+  border-radius: 5px; */
+}
+#top-scroller i{
+  font-size: 20px;
+  color: black;
+  
 }
 /* #header-sec {
     height: 970px;
@@ -46,6 +64,33 @@ body {
   position: relative;
   height: 100%;
   padding-bottom: 380px;
+}
+.header-ele h1{
+  margin-bottom: 20px;  
+}
+
+.header-ele p{
+  margin-bottom: 20px;
+}
+
+.header-ele button{
+  width: 100px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  margin-right: 40px;
+  padding: 3px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #ff4500 !important;
+  color: #fff !important;
+  text-align: center;
+}
+
+.header-ele button a{
+  text-decoration: none;
+  color: #fff;
+  
 }
 
 .main-slider {
@@ -285,35 +330,49 @@ body {
   text-align: center;
 }
 #team-btn {
-  position: absolute;
+  /* position: absolute;
   top: 15%;
   left: 0;
-  right: 0;
+  right: 0;*/
   text-align: center;
+  margin-top: 30px;
+  
+  z-index:999;
 }
 #team-btn button {
   border: none;
   outline: none;
   text-decoration: none;
   margin-right: 40px;
-  padding: 8px 20px;
-  border-radius: 10px;
+  padding: 3px 12px;
+  border-radius: 4px;
   cursor: pointer;
+  background-color: #fff;
 }
 
-.team-container {
-  position: relative;
-  /* position: absolute;
-                    top: 32%;
-                    left: 0;
-                    right: 0; */
-  margin-top: 100px;
+.team-btn-active{
+  background-color: #ff4500 !important;
+  color: #fff !important;
+
+}
+#outer-team-container{
+margin: 40px 0; 
+
+}
+.team-container { 
   text-align: center;
+  
 }
 .team-container > div {
   display: inline-block;
-  margin-right: 30px;
-  padding: 30px 0;
+  margin-right: 50px;
+  padding: 30px 10px;
+  cursor: pointer;
+}
+.team-container div:hover {
+  /* border-right: 1px solid black;
+  border-left: 1px solid black; */
+  box-shadow: 10px 10px 30px -20px rgba(0, 0, 0, 0.64);
 }
 .team-container div img {
   object-fit: cover;
@@ -494,12 +553,17 @@ h2::after {
   width: 50%;
   outline-style: none;
   border: none;
-  border-radius: 15px;
+  border-radius: 4px;
   padding: 10px;
   background-color: #ff4500;
   color: white;
   letter-spacing: 2px;
   font-size: 18px;
+  cursor: pointer;
+}
+#form-container button:hover{
+  box-shadow: 4px 5px 30px -9px rgba(0, 0, 0, 0.9);
+  font-weight: bold;
 }
 
 #desc-container {
@@ -565,7 +629,7 @@ h2::after {
 
 #social {
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #social div {
@@ -577,12 +641,13 @@ h2::after {
   margin-right: 15px;
   /* margin: auto; */
   position: relative;
+  cursor: pointer;
 }
 
 #social a {
   /* margin-right: 15px; */
   color: white;
-  cursor: pointer;
+  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -595,9 +660,11 @@ h2::after {
   transition-timing-function: ease-out;
 }
 
-#social i:hover {
+#social div:hover {
   transform: rotate(20deg);
-  font-size: 20px;
+  font-size: 25px;
+  /* transition: 0.5s eases; */
+  box-shadow: 4px 5px 30px -9px rgba(0, 0, 0, 0.64);
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -909,7 +976,7 @@ h2::after {
   }
   /* our team section */
   #team-btn {
-    top: 9%;
+    top: 6%;
   }
   /* footer section */
   #grid-container {

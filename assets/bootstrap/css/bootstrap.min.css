@@ -6444,7 +6444,9 @@ button.bg-dark:hover {
 }
 
 .bg-white {
-    background-color: #fff!important
+    /* background-color: #fff!important */ 
+    /* removed !important */
+    background-color: #fff;
 }
 
 .bg-transparent {

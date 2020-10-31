@@ -1,6 +1,28 @@
 window.addEventListener("DOMContentLoaded", (event) => {
+
+  // Navigation Bar shrink on scroll below 80px from top of document
+window.onscroll = function () {
+  navBarStyle();
+}
+function navBarStyle(){
+  console.log(document.querySelector('.navbar'));
+  if(document.body.scrollTop > 80 || document.documentElement.scrollTop>80){
+    document.getElementById('logo-img').style.height = "60px";
+    document.getElementById('logo-img').style.width = "60px";
+    document.querySelector('.navbar').style.padding = "0rem 1rem";
+    document.querySelector('.navbar').style.backgroundColor = "rgba(999, 999, 999, 0.9)";
+    
+  }else{
+    document.querySelector('#logo-img').style.height = "80px";
+    document.getElementById('logo-img').style.width = "80px";
+    document.querySelector('.navbar').style.padding = ".5rem 1rem";
+    document.querySelector('.navbar').style.backgroundColor = "#fff";
+
+  }
+}
   // Dark mode script
-  // s
+  
+
 
   //Product Category Section SCRIPT starts here
 

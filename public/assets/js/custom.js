@@ -53,6 +53,22 @@ function navBarStyle(){
     // productSecAnimation();
     mirror_ref.style.animation = "fade-up 2s ease";
     mirror_ref.style.display = "flex";
+
+    if(accessories_btn_ref.classList.contains('product-btn-active')){
+
+      accessories_btn_ref.classList.remove("product-btn-active");
+    }else if(light_btn_ref.classList.contains('product-btn-active'))
+    {
+      light_btn_ref.classList.remove("product-btn-active");
+    }else if(electrical_btn_ref.classList.contains('product-btn-active'))
+      {
+
+        electrical_btn_ref.classList.remove("product-btn-active");
+      }
+    mirror_btn_ref.classList.add("product-btn-active");
+    mirror_btn_ref.style.transition="0.3s ease-in";
+
+
   });
 
   light_btn_ref.addEventListener("click", (e) => {
@@ -62,7 +78,20 @@ function navBarStyle(){
 
     light_ref.style.animation = "fade-up 2s ease";
     light_ref.style.display = "flex";
-    // productSecAnimation();
+    
+    if(accessories_btn_ref.classList.contains('product-btn-active')){
+
+      accessories_btn_ref.classList.remove("product-btn-active");
+    }else if(mirror_btn_ref.classList.contains('product-btn-active'))
+    {
+      mirror_btn_ref.classList.remove("product-btn-active");
+    }else if(electrical_btn_ref.classList.contains('product-btn-active'))
+      {
+
+        electrical_btn_ref.classList.remove("product-btn-active");
+      }
+    light_btn_ref.classList.add("product-btn-active");
+    light_btn_ref.style.transition="0.3s ease-in";
   });
   accessories_btn_ref.addEventListener("click", (e) => {
     mirror_ref.style.display = "none";
@@ -71,6 +100,20 @@ function navBarStyle(){
 
     accessories_ref.style.animation = "fade-up 2s ease";
     accessories_ref.style.display = "flex";
+
+    if(light_btn_ref.classList.contains('product-btn-active')){
+
+      light_btn_ref.classList.remove("product-btn-active");
+    }else if(mirror_btn_ref.classList.contains('product-btn-active'))
+    {
+      mirror_btn_ref.classList.remove("product-btn-active");
+    }else if(electrical_btn_ref.classList.contains('product-btn-active'))
+      {
+
+        electrical_btn_ref.classList.remove("product-btn-active");
+      }
+    accessories_btn_ref.classList.add("product-btn-active");
+    accessories_btn_ref.style.transition="0.3s ease-in";
   });
   electrical_btn_ref.addEventListener("click", (e) => {
     mirror_ref.style.display = "none";
@@ -79,6 +122,20 @@ function navBarStyle(){
     light_ref.style.display = "none";
     electrical_ref.style.animation = "fade-up 2s ease";
     electrical_ref.style.display = "flex";
+
+    if(accessories_btn_ref.classList.contains('product-btn-active')){
+
+      accessories_btn_ref.classList.remove("product-btn-active");
+    }else if(mirror_btn_ref.classList.contains('product-btn-active'))
+    {
+      mirror_btn_ref.classList.remove("product-btn-active");
+    }else if(light_btn_ref.classList.contains('product-btn-active'))
+      {
+
+        light_btn_ref.classList.remove("product-btn-active");
+      }
+    electrical_btn_ref.classList.add("product-btn-active");
+    electrical_btn_ref.style.transition="0.3s ease-in";
   });
 
   const animate = document.querySelectorAll(".product-animation");

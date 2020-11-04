@@ -1,11 +1,29 @@
 window.addEventListener("DOMContentLoaded", (event) => {
 
-// top scroller script
-document.getElementById('top-scroller').addEventListener('click',e=>{
 
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-});
+  // Smooth Scrolling Scripts
+
+  const navElements = document.querySelectorAll('.smooth-scroll');
+  for(const ele of navElements){
+    ele.addEventListener('click',scrollFunction);
+
+  }
+
+  function scrollFunction(e){
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    const offsetTop = document.querySelector(href).offsetTop;
+    scroll({
+      top: offsetTop,
+      behavior: "smooth"
+    });
+  }
+// top scroller script
+// document.getElementById('top-scroller').addEventListener('click',e=>{
+
+//   document.body.scrollTop = 0; // For Safari
+//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+// });
 
 
   // Navigation Bar shrink on scroll below 80px from top of document
@@ -14,7 +32,7 @@ window.onscroll = function () {
 }
 function navBarStyle(){
   // console.log(document.querySelector('.navbar'));
-  if(document.body.scrollTop > 80 || document.documentElement.scrollTop>80){
+  if(document.body.scrollTop > 100 || document.documentElement.scrollTop>100){
     document.getElementById('logo-img').style.height = "60px";
     document.getElementById('logo-img').style.width = "60px";
     

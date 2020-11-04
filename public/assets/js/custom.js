@@ -32,7 +32,7 @@ window.onscroll = function () {
 }
 function navBarStyle(){
   // console.log(document.querySelector('.navbar'));
-  if(document.body.scrollTop > 100 || document.documentElement.scrollTop>100){
+  if(document.body.scrollTop >= 60 || document.documentElement.scrollTop>=60){
     document.getElementById('logo-img').style.height = "60px";
     document.getElementById('logo-img').style.width = "60px";
     

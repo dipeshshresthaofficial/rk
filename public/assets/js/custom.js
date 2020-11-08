@@ -31,8 +31,11 @@ window.onscroll = function () {
   navBarStyle();
 }
 function navBarStyle(){
-  // console.log(document.querySelector('.navbar'));
-  if(document.body.scrollTop >= 60 || document.documentElement.scrollTop>=60){
+  // console.log(document.documentElement.scrollTop);
+
+  // let headerSec = document.querySelector(".just-below-nav");
+  // window.scrollY >= headerSec.offsetTop - (window.innerHeight);
+  if(document.body.scrollTop > 60 || document.documentElement.scrollTop>60){
     document.getElementById('logo-img').style.height = "60px";
     document.getElementById('logo-img').style.width = "60px";
     

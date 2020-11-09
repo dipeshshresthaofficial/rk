@@ -1,6 +1,16 @@
+window.onload=myFun;
+// Pre loader Scripts
+const preLoader = document.getElementById("pre-loader");
+function myFun(){
+
+  preLoader.style.display="none";
+}
+
 window.addEventListener("DOMContentLoaded", (event) => {
 
 
+
+  
   // Smooth Scrolling Scripts
 
   const navElements = document.querySelectorAll('.smooth-scroll');
